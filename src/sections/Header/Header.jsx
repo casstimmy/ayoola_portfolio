@@ -1,29 +1,39 @@
 import styles from './Header.css'
 import profile_img from '../../assets/ay_img.jpg'
-import modeIcon from '../../assets/moon-svgrepo-com.svg'
-import modeIcon2 from '../../assets/icons8-sun.svg'
+import { IoIosSunny } from "react-icons/io";
+import { IoIosMoon } from "react-icons/io";
 import CV from '../../assets/Resume - Ayoola Ayodeji..docx'
-import Nav from './Nav'
 import Socials from './Socials'
+import { useTheme } from '../../ColorTheme'
 
 
-function header() {
+function Header() {
+  const {theme, toggleTheme} = useTheme();
+
+  const themeIcon = theme === 'light' ? IoIosSunny : IoIosMoon
+
   return (
-    <section id='intro' className={styles.container}>
-      <Nav/>
-      <Socials/>
+    <section id='intro' className="container">
+      <div className="header_container" >
         <div className={styles.coloeModeContainer}>
            <img src={profile_img} 
-           alt="Profile image of Ayoola Ayo" />
-s
-           <img src={modeIcon} 
-           className= {styles.colorMode}
-           alt="Color Theme Icon" />
+           alt="Ayoola Ayo Profile-image" />
 
-            <img src={modeIcon2} 
-            className= {styles.colorMode}
-            alt="Color Theme Icon" />
+           <a href="#"
+           target='blank'
+           className= {styles.colorMode}
+           onClick={toggleTheme}>
+            <IoIosSunny />
+            </a>
+
+            <a href="#"
+            target='blank'
+           className= {styles.colorMode}
+           onClick={toggleTheme}>
+            <IoIosMoon /> 
+            </a>
         </div>
+        <Socials/>
         <div>
             <h3>Hello i'm</h3>
             <h1>Ayoola Ayo</h1>
@@ -31,17 +41,18 @@ s
             <p>Freelancer Providing programming and design services. if you need with deigital services, please don't hesitate to contact me</p>
             <p>Let's work together and get started</p>
         </div>
-        <div>
-          <a href={CV} download>
-            <button className='hover'>Download Cv</button>
+        <div className='cta-btns'>
+          <a className='btn' href={CV} download>
+            Download Cv
           </a>
 
-          <a href="" download>
-            <button className='hover'>Contact</button>
+          <a className='btn btn-primary' href="" download>
+            Contact Me
           </a>
+        </div>
         </div>
     </section>
   )
 }
 
-export default header
+export default Header
