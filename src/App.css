@@ -1,230 +1,257 @@
 /*==============
-Variables Css
+Variables for root light theme Css
 ==============*/
 :root {
---header-height: 3rem;
-
-
-/*==============
+  /*==============
 media sizing
 ==============*/
---container-width-lg: 75%;
---container-width-md: 86%;
---container-width-sm: 90%;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
 
-
+  /*==============
+Colors Light
+==================*/
+  --color-dark: #a7e6ff;
+  --color-secondary: #040847;
+  --color-primary: #3572ef;
+  --color-light: #a7e6ff;
+  --color-white: #040847;
+  --color-body-bg: #ffffff;
+  --color-nav-icon: #3abef9;
+  --color-nav-icon-hover: #ffffff;
+  --color-text: #040847;
+  --color-nav-icon-marker: #040847;
+  --nav-bg: #040847;
+}
 
 /*==============
-Colors
-==================*/
-/*color mode HSL(hue, saturation, lightness)*/
---hue: 0;
---sat: 0;
---color-dark: #040847;
---color-secondary: #3572EF;
---color-primary : #3ABEF9;
---color-light: #A7E6FF;
---color-white: #ffffff;
---title-color: hsl(var(--hue), var(--sat), 20%);
---title-color-dark: hsl(var(--hue), var(--sat), 0%);
---text-color: hsl(var(--hue), var(--sat), 46%);
---body-color: hsl(var(--hue), var(--sat), 98%);
---color-body-bg: #413589;
+Variables for root dark theme Css
+==============*/
+[data-theme="dark"] {
+  /*==============
+    media sizing
+    ==============*/
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  /*==============
+    Colors
+    ==================*/
+
+  --color-dark: #040847;
+  --color-secondary: #3572ef;
+  --color-primary: #3abef9;
+  --color-light: #040847;
+  --color-white: #ffffff;
+  --color-body-bg: #413589;
+  --color-nav-icon: #3abef9;
+  --color-text: #ffffff;
+  --color-nav-icon-marker: #ffffff;
+  --nav-bg: rgba(1, 2, 20, 0.283);
 }
 
 /*===================
 Base
 ====================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-h1,h2,h3,h4,h5{
-    font-weight: 500;
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: 500;
+  color: var(--color-text);
 }
 
-h1{
-    font-size: 2.5rem;
+h1 {
+  font-family: "Rubik", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-size: 32px;
 }
 
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-size: 20px;
+}
+
+h2,
+h3,
+p,
+a,
+text {
+  font-family: "Roboto Mono", monospace;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.hover {
+  cursor: pointer;
+}
 
 body,
 button,
 input,
-textarea{
-font-family: var(--body-font);
-font-size: var(--normal-font-size);
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
 }
 
 body {
-    background-color: var(--color-body-bg);
-    color: var(--text-color);
-}
-
-h1, h2, h3 {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-}
-
-ul {
-    list-style: none;
+  background-color: var(--color-body-bg);
+  color: var(--text-color);
 }
 
 a {
-    text-decoration: none;
-    color: var(--color-primary);
-    transition: all 0.5s ease;
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: all 0.5s ease;
 }
 
 a:hover {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
+
 .btn {
-    width: max-content;
-    display: inline-block;
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.4rem;
-    border: 1px solid var(--color-primary);
-    cursor: pointer;
-    outline: none;
-    transition: all 0.5s ease;
+  width: max-content;
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
 }
 
 .btn-primary {
-    background: var(--color-primary);
-    color: var(--color-body-bg);
+  background: var(--color-primary);
+  color: var(--color-body-bg);
 }
 
 .btn:hover {
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-    border-color: transparent;
+  color: var(--color-nav-icon-hover);
+  background-color: var(--color-secondary);
+  border-color: transparent;
+}
+
+
+ul {
+  list-style: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-
 
 /*=======================
 Reusable CSS Classes
 ========================*/
-section{
-    height: 100vh;
-    padding: 6rem 0 2rem;
+section {
+  height: 100vh;
+  padding: 0 0 2rem;
 }
 
-
 .section_title {
-    font-size: var(--h1-font-size);
-    color: var(--title-color);
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
 }
 
 .section_subtitle {
-    display: block;
-    font-size: var(--small-font-size);
-    margin-bottom: 4rem;
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
 }
 
 .section_title,
 .section_subtitle {
-    text-align: center;
+  text-align: center;
 }
 
 /*===========================
 Layout
 =============================*/
 .container {
-   width: var(--container-width-lg);
-   margin: 0 auto;
+  width: var(--container-width-lg);
+  margin: 0 auto;
 }
 
-.grid{
-    display: grid;
-    gap: 1.5rem
-}
-
-.button {
-    display: inline-block;
-    background-color: var(--title-color);
-    color: var(--container-color);
-    padding: 1.25rem 2rem;
-    border-radius: 1rem;
-    font-weight: var(--font-medium);
-}
-
-.button:hover {
-    background-color: var(--title-color-dark);
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .button_icon {
-    margin-left: var(--mb-0-5);
+  margin-left: var(--mb-0-5);
 }
 
 .button-flex {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 
-* {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-  }
-  
-  h1 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  
-  p {
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
 
+p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /*===========================
 Media Queries (Medium Screen)
 =============================*/
 @media screen and (max-width: 1024px) {
-    .container {
-        width: var(--container-width-md);
-    }
-} 
-
+  .container {
+    width: var(--container-width-md);
+  }
+}
 
 /*===========================
 Media Queries (Small Screen)
 =============================*/
 @media screen and (max-width: 600px) {
-    .container {
-        width: var(--container-width-sm);
-    }
+  .container {
+    width: var(--container-width-sm);
+  }
 
-    section {
-        margin-bottom: 3rem;
-    }
-} 
-
+  section {
+    margin-bottom: 3rem;
+  }
+}

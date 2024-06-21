@@ -1,9 +1,17 @@
-.header_container{
+.container{
     height: 100vh;
     padding: 3rem;
     overflow: hidden;
     text-align: center;
     position: relative;
+}
+
+.header_container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 3rem;
+    justify-content: center;
+    
 }
 
 .cta-btns{
