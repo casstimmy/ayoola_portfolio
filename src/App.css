@@ -12,6 +12,7 @@ media sizing
   /*==============
 Colors Light
 ==================*/
+  --color-white-text: #ffffff;
   --color-dark: #a7e6ff;
   --color-secondary: #040847;
   --color-primary: #3572ef;
@@ -23,6 +24,8 @@ Colors Light
   --color-text: #040847;
   --color-nav-icon-marker: #040847;
   --nav-bg: #040847;
+  --img-bg: linear-gradient(180deg, #040847 0%, #7c5fe6 100%);
+  --card-bg: rgba(22, 17, 20, 0.198)
 }
 
 /*==============
@@ -39,7 +42,7 @@ Variables for root dark theme Css
   /*==============
     Colors
     ==================*/
-
+  --color-white-text: #ffffff;
   --color-dark: #040847;
   --color-secondary: #3572ef;
   --color-primary: #3abef9;
@@ -50,6 +53,8 @@ Variables for root dark theme Css
   --color-text: #ffffff;
   --color-nav-icon-marker: #ffffff;
   --nav-bg: rgba(1, 2, 20, 0.283);
+  --img-bg: linear-gradient(180deg, #413589 0%, #7c5fe6 100%);
+  --card-bg: rgba(22, 17, 47, 0.398)
 }
 
 /*===================
@@ -73,12 +78,9 @@ html {
   display: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
+h1,h2,
+h3,h4,
+h5,p {
   font-weight: 500;
   color: var(--color-text);
 }
@@ -89,21 +91,17 @@ h1 {
   font-size: 32px;
 }
 
-h1,
-h2 {
+h1,h2 {
   text-transform: uppercase;
 }
 
-h2,
-h3 {
+h2,h3 {
   font-size: 20px;
 }
 
-h2,
-h3,
-p,
-a,
-text {
+h2,h3,
+p,a,
+.text{
   font-family: "Roboto Mono", monospace;
 }
 
@@ -211,11 +209,8 @@ Layout
   gap: 1.5rem;
 }
 
-.button_icon {
-  margin-left: var(--mb-0-5);
-}
 
-.button-flex {
+.btn-flex {
   display: inline-flex;
   align-items: center;
 }
@@ -237,21 +232,23 @@ p {
 /*===========================
 Media Queries (Medium Screen)
 =============================*/
-@media screen and (max-width: 1024px) {
-  .container {
-    width: var(--container-width-md);
-  }
+@media screen and (max-width: 992px) {
+
 }
 
 /*===========================
 Media Queries (Small Screen)
 =============================*/
-@media screen and (max-width: 600px) {
-  .container {
-    width: var(--container-width-sm);
-  }
+@media screen and (max-width: 768px) {
 
-  section {
-    margin-bottom: 3rem;
-  }
+}
+
+
+@media screen and (max-width: 576px) {
+
+}
+
+
+@media screen and (max-width: 350px) {
+
 }

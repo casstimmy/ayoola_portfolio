@@ -2,7 +2,7 @@ import "./nav.css";
 import React, { useState, useEffect, useRef } from "react";
 import { RiHome5Line } from "react-icons/ri";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { TbLayoutListFilled } from "react-icons/tb";
+import { FaBagShopping } from "react-icons/fa6";
 import { MdDesignServices } from "react-icons/md";
 import { BsPhoneVibrateFill } from "react-icons/bs";
 
@@ -53,13 +53,13 @@ function Nav() {
         <text>About</text>
       </a>
       <a
-        href="#experience"
-        className={activeClass === "#experience" ? "active" : ""}
+        href="#skills"
+        className={activeClass === "#skills" ? "active" : ""}
       >
-        <TbLayoutListFilled />
-        <text>Works</text>
+        <FaBagShopping />
+        <text>Skills</text>
       </a>
-      <a href="#service" className={activeClass === "#service" ? "active" : ""}>
+      <a href="#services" className={activeClass === "#services" ? "active" : ""}>
         <MdDesignServices />
         <text>Service</text>
       </a>
