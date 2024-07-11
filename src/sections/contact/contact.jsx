@@ -5,9 +5,10 @@ function Contact() {
   
   return (
     <section className='container' id='contact'>
-    <h2>Contact Page</h2>
+    <h2>Contact Me</h2>
  <div className='contact-container'>
  <div className='contact-content'>
+  <h3>Get in Touch</h3>
        <form className='form-card'>
 
           <input

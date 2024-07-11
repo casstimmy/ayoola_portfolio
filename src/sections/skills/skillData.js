@@ -26,6 +26,16 @@ export const SKILLS = [
         ],
     },
     {
+        data_title: "Graphic",
+        data_icon: <MdGroups3 />,
+        skills: [
+            { skill: 'Image Editing', percentage: '65%' },
+            { skill: 'Illustrator', percentage: '80%' },
+            { skill: 'Motion Graphics', percentage: '70%' },
+            { skill: 'Animation', percentage: '60%' },
+        ],
+    },
+    {
         data_title: "Tools",
         data_icon: <TbSettingsCode />,
         skills: [
@@ -33,6 +43,9 @@ export const SKILLS = [
             { skill: 'Visual Studio Code', percentage: '80%' },
             { skill: 'Figma', percentage: '55%' },
             { skill: 'PyCharm', percentage: '75%' },
+            { skill: 'Adobe Illustrator', percentage: '85%' },
+            { skill: 'Adobe Photoshop', percentage: '65%' },
+            { skill: 'Adobe AfterEffect', percentage: '65%' },
         ],
     },
     {

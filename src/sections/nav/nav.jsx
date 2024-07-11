@@ -5,6 +5,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaBagShopping } from "react-icons/fa6";
 import { MdDesignServices } from "react-icons/md";
 import { BsPhoneVibrateFill } from "react-icons/bs";
+import { SiHyperskill } from "react-icons/si";
 
 function Nav() {
   const [activeClass, setActiveClass] = useState("#home");
@@ -52,16 +53,23 @@ function Nav() {
         <BsFillPersonLinesFill />
         <text>About</text>
       </a>
-      <a
-        href="#skills"
-        className={activeClass === "#skills" ? "active" : ""}
-      >
-        <FaBagShopping />
+      <a href="#skills" className={activeClass === "#skills" ? "active" : ""}>
+        <SiHyperskill />
         <text>Skills</text>
       </a>
-      <a href="#services" className={activeClass === "#services" ? "active" : ""}>
+      <a
+        href="#services"
+        className={activeClass === "#services" ? "active" : ""}
+      >
         <MdDesignServices />
         <text>Service</text>
+      </a>
+      <a
+        href="#portfolio"
+        className={activeClass === "#portfolio" ? "active" : ""}
+      >
+        <FaBagShopping />
+        <text className="Portfolio_text">Portfolio</text>
       </a>
       <a href="#contact" className={activeClass === "#contact" ? "active" : ""}>
         <BsPhoneVibrateFill />

@@ -3,6 +3,7 @@ import { IoIosSunny, IoIosMoon } from "react-icons/io";
 import CV from "../../assets/Resume - Ayoola Ayodeji..docx";
 import { useTheme } from "../../ColorTheme";
 import Socials from "./Socials";
+import Scrollericons from './Scrollericons';
 
 function Header() {
   const { theme, toggleTheme } = useTheme("light");
@@ -23,8 +24,8 @@ function Header() {
         </a>
         <div className="home_container"> 
         <div className="img-layout">
+              <div><Scrollericons /></div>
               <img src={profile_img} alt="Ayoola Ayo Profile-image" className="img1" />
-
           </div>
 
           <div className="details-layout">

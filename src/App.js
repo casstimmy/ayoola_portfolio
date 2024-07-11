@@ -5,6 +5,7 @@ import About from './sections/about/about.jsx';
 import Contact from './sections/contact/contact.jsx';
 import Skills from './sections/skills/Skills.jsx';
 import Services from './sections/services/Services.jsx';
+import Portfolio from './sections/portfolio/Portfolio.jsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Skills />
       <Services />
+      <Portfolio />
       <Contact />
     </body>
   );

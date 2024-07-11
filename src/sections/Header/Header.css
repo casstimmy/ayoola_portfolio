@@ -21,15 +21,21 @@
     justify-content: center;
 }
 
+.icons{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
 
 .socials-icons{
-    display: flex;
+    
     flex-direction: column;
     gap: 0.8rem;
     position: absolute;
     left: 6%;
     top: 40%;
-    justify-content: center;
+    
 }
 
 .socials-icons::before{
@@ -49,7 +55,7 @@
     height: 50px;
     background-color: var(--color-primary);
     left: 0.6rem;
-    top: 7rem;
+    top: 9.5rem;
  }
 
 .socials-icons a{
@@ -60,25 +66,25 @@
 .img-layout{
   position: relative;
   display: flex;
+  flex-direction: column-reverse;
   width: 80%;
   height:80%;
   justify-content: center;
-  align-items: center;
-  overflow: auto;
-  padding: 2rem;
+  overflow: hidden;
 }
 
+
 .img1 {
-    position: absolute;
     display: flex;
     justify-content: center;
-   align-items: center;
-    width: 100%;
-    height:  100%;
+    align-items: center;
     object-fit: cover;
-    border-radius: 0% 0% 30% 79% / 56% 55% 49% 62%;
-    box-shadow: inset 0 -200px 0 10094px rgba(255, 255, 255, 0.5),
-    0 0 0 20px var(--img-bg);
+  }
+
+  .Scrollericons{
+    background: var(--color-white);
+    padding: 1.5rem;
+    justify-content: space-around;
   }
 
 

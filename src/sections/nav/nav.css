@@ -40,6 +40,9 @@ nav a.active {
     color: var(--color-nav-icon);
     filter: drop-shadow(0 0 15px var(--color-nav-icon));
     transform: translateY(-1.5rem);
+    top: -3px;
+    font-size: 1rem;
+    height: 50px;
 }
 
 #marker {
@@ -57,29 +60,6 @@ nav a.active {
     transition: left 0.3s ease, width 0.3s ease;
 }
 
-#marker::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: -20px;
-    width: 11px;
-    height: 15px;
-    background: transparent;
-    border-top-right-radius: 20px;
-    box-shadow: 4px -4px 0 3px var(--color-body-bg);
-}
-
-#marker::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    right: -18px;
-    width: 11px;
-    height: 15px;
-    background: transparent;
-    border-top-left-radius: 20px;
-    box-shadow: -4px -4px 0 3px var(--color-body-bg);
-}
 
 #marker span {
     position: absolute;
@@ -99,7 +79,7 @@ nav a text {
     pointer-events: none;
     transform: translateY(50px);
     opacity: 0;
-    font-size: 0.6em;
+    font-size: 0.5em;
     transition: 0.5s;
     text-transform: uppercase;
     padding: 0.3rem;
