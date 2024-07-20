@@ -195,7 +195,7 @@
 }
 
 @media (max-width: 768px) {
-    .container {
+    .skills-container {
         padding: 3rem;
         width: var(--container-width-sm);
     }
@@ -203,8 +203,13 @@
 
    .skills-contact {
     flex-direction: column-reverse;
-    gap: 2rem;
+    gap: 1.5rem;
    }
+
+   .skill-card{
+    padding: 1.2rem;
+    font-size: 1rem;
+}
 
 
    .skills,
@@ -226,8 +231,8 @@
 }
 
 @media (max-width: 600px) {
-    .container {
-        padding: 1rem;
+    .skills-container {
+        padding: 3rem;
         width: var(--container-width-sm);
     }
 

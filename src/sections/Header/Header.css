@@ -1,4 +1,4 @@
-.container{
+.container {
     height: 100vh;
     padding: 3rem;
     overflow: hidden;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.home_container{
+.home_container {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -15,40 +15,37 @@
     align-items: center;
 }
 
-.cta-btns{
+.cta-btns {
     display: flex;
     gap: 1.2rem;
     justify-content: center;
 }
 
-.icons{
+.icons {
     display: flex;
     gap: 0.8rem;
     justify-content: center;
 }
 
-
-.socials-icons{
-    
+.socials-icons {
     flex-direction: column;
     gap: 0.8rem;
     position: absolute;
     left: 6%;
     top: 40%;
-    
 }
 
-.socials-icons::before{
-   content: '';
-   position: absolute;
-   width: 1px;
-   height: 50px;
-   background-color: var(--color-primary);
-   left: 0.6rem;
-   top: -4rem;
+.socials-icons::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background-color: var(--color-primary);
+    left: 0.6rem;
+    top: -4rem;
 }
 
-.socials-icons::after{
+.socials-icons::after {
     content: '';
     position: absolute;
     width: 1px;
@@ -56,39 +53,35 @@
     background-color: var(--color-primary);
     left: 0.6rem;
     top: 9.5rem;
- }
+}
 
-.socials-icons a{
+.socials-icons a {
     font-size: 1.2rem;
 }
 
-
-.img-layout{
-  position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-  width: 80%;
-  height:80%;
-  justify-content: center;
-  overflow: hidden;
+.img-layout {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 12rem;
 }
 
-
 .img1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-  }
+    max-width: 400px;
+}
 
-  .Scrollericons{
+.Scrollericons {
     background: var(--color-white);
     padding: 1.5rem;
     justify-content: space-around;
-  }
+    max-width: 400px;
+    border-radius: 1rem 0 1rem 1rem;
+}
 
-
-.profile_info{
+.profile_info {
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
@@ -105,7 +98,7 @@
     margin-bottom: 13rem;
 }
 
-.btn-theme-icon{
+.btn-theme-icon {
     z-index: 1000;
     font-size: 2rem;
     position: absolute;
@@ -113,36 +106,41 @@
     right: 50px;
 }
 
-
 @media (max-width: 1025px) {
     .container {
         padding: 18rem;
         width: var(--container-width-md);
         margin: 0 auto;
     }
-    .img-layout{
-      
+    .img-layout {
         width: 50%;
         padding: 2rem;
-      }
+    }
 }
 
 @media (max-width: 768px) {
-    .home_container{
-        flex-direction: column-reverse;
-        gap: 3rem;
+    .home_container {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .img-layout {
+        display: none; 
     }
 
     .container {
         width: var(--container-width-sm);
     }
-
 }
 
 @media (max-width: 600px) {
-
     .container {
-        padding: 18rem;
         width: var(--container-width-md);
     }
- }
+
+    .img-layout {
+        display: none;
+    }
+}

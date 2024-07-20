@@ -6,7 +6,7 @@ function About() {
   return (
     <section className='about_container' id='about'>
       <h2>About Page</h2>
-      <div className="img-layout">
+      <div className="img-about">
               <img src={about_img} alt="Ayoola Ayo about-image" className="img" />
           </div>
     </section>
