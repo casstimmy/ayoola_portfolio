@@ -1,4 +1,4 @@
-.container {
+.home-container {
     height: 100vh;
     padding: 3rem;
     overflow: hidden;
@@ -33,6 +33,7 @@
     position: absolute;
     left: 6%;
     top: 40%;
+    z-index: 100;
 }
 
 .socials-icons::before {
@@ -107,8 +108,8 @@
 }
 
 @media (max-width: 1025px) {
-    .container {
-        padding: 18rem;
+    .home-container {
+        padding: 0.5rem;
         width: var(--container-width-md);
         margin: 0 auto;
     }
@@ -130,14 +131,15 @@
         display: none; 
     }
 
-    .container {
+    .home-container {
         width: var(--container-width-sm);
+        padding: 2rem;
     }
 }
 
 @media (max-width: 600px) {
-    .container {
-        width: var(--container-width-md);
+    .home-container {
+        width: var(--container-width-sm);
     }
 
     .img-layout {
