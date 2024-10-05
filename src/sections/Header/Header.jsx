@@ -13,7 +13,7 @@ function Header() {
   return (
     <>
       <Socials />
-      <section id="home" className="container">
+      <section id="home" className="home-container">
         <a
           href="#"
           target="blank"
