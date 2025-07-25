@@ -11,9 +11,7 @@ export default function CharacterPreview() {
       whileHover={{ scale: 1.05, rotate: 1 }}
       className="relative z-20 group w-[280px] h-[500px]"
     >
-      {/* Glow Circle */}
-      <div className="absolute inset-0 rounded-full blur-xl bg-cyan-500 opacity-30 animate-pulse" />
-
+    
       {/* Replace Image with 3D Model */}
    <div className="relative z-10 w-full h-full overflow-visible">
 

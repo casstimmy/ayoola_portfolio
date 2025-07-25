@@ -2,26 +2,31 @@ import TopBar from "./TopBar";
 import LeftPanel from "./LeftPanel";
 import RightNav from "./RightNav";
 import BottomBar from "./BottomBar";
+import RisingParticles from "./RisingParticles";
 
 export default function Layout({ children }) {
   return (
     <div className="relative min-h-screen w-full text-white font-sans overflow-hidden flex flex-col">
       <TopBar />
 
-      {/* Background Video */}
-      <div className="absolute inset-0 -z-10 h-full w-full">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover animate-fade-in"
-        >
-          <source src="/asset/background.mp4" type="video/mp4" />
-          <source src="/asset/background.mov" type="video/quicktime" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-blue/60 backdrop-blur-xs" />
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden">
+        <img
+          src="/asset/background3.jpg"
+          alt="Background"
+          className="w-full h-full object-cover transform scale-[1.05] saturate-[1.1] brightness-95 contrast-110"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom right, rgba(0, 255, 255, 0.05), rgba(0, 255, 255, 0.15))",
+          }}
+        />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black/20" />
+
+        {/* ✨ Particles rising upward */}
+        <RisingParticles />
       </div>
 
       {/* Main Layout */}
